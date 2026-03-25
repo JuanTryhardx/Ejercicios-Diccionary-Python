@@ -8,6 +8,16 @@ class Base_datos:
         print(nuevo_obj)
         print(f"Botella agregada en posicion {len(self.lista_botellas) -1}")
         
+    def ver_todas(self):
+        if not self.lista_botellas:
+            print("La base de datos está vacía.")
+            return
+        print("\n======= BASE DE DATOS =======")
+        for i in range(len(self.lista_botellas)):
+            print(f"\n  Posición: {i}")
+            self.lista_botellas[i].ver_info()
+        print("================================\n")
+        
     def buscar_botella(self, indice):
         if 0 <= indice < len(self.lista_botellas):
             print(f"\n Botella en posicion {indice}: ")
