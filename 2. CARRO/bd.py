@@ -20,7 +20,7 @@ class Base_datos:
             
     def buscar_carro(self, indice):
         if 0 <= indice < len(self.lista_carros):
-            print(f" Botella en posicion: {indice}: ")
+            print(f" Carro en posicion: {indice}: ")
             self.lista_carros[indice].ver_info()
             return self.lista_carros[indice]
         else:
@@ -31,7 +31,7 @@ class Base_datos:
         carro = self.buscar_carro(indice)
         if carro:
             carro.set_modelo(nuevo_modelo)
-            print(f"Capacidad actualizada a: {nuevo_modelo}")
+            print(f"Modelo actualizada a: {nuevo_modelo}")
             
     def eliminar_carro(self, indice):
         if 0 <= indice < len(self.lista_carros):
